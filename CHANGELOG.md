@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+
 ---
 
 ## [0.1.0] - 2025-07-02
@@ -19,5 +20,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `compiler.py` script for exporting the index to JSON and TOML.
 - GitHub repository structure including issue templates and `CONTRIBUTING.md`.
 
-[unreleased]: https://github.com/scindex/scindex/compare/v0.0.1...HEAD
-[0.0.1]: https://github.com/scindex/scindex/releases/tag/v0.0.1
+[unreleased]: https://github.com/scindex/scindex/compare/v0.1.0...HEAD
+[0.0.1]: https://github.com/scindex/scindex/releases/tag/v0.1.0
