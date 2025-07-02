@@ -8,7 +8,7 @@ To address the software industry's lack of a standard identifier system the Scin
 
 Scindex provides a structured core identifier that can be flexibly prefixed and suffixed to meet various documentation needs.
 
-The full pattern is: **`[PREFIX]-[Scindex Code]-[SUFFIX]`**
+The full pattern is: `[PREFIX]-[Scindex Code]-[SUFFIX]`
 
 ---
 
@@ -20,7 +20,7 @@ The **Scindex Code** is the basis of the system, pinpointing a specific category
 * **Section (`01`):** A two-digit code for a sub-category within the division.
 * **Item (`40`):** A two-digit code for a specific component type within the section.
 
-For example, the Scindex Code for "Graph Databases" is **`DATA0140`**.
+For example, the Scindex Code for "Graph Databases" is `DATA0140`.
 
 ---
 
@@ -38,17 +38,17 @@ You create a complete, unique ID by adding a prefix and a suffix to the Scindex 
 
 An ID of **`ADR-DATA0140-32`** is broken down as:
 
-* **`ADR`**: This is an Architecture Decision Record.
-* **`DATA0140`**: The decision relates to "Graph Databases  (`DATA` -> Data Management, `01` -> Databases, `40` -> Graph Databases)"
-* **`32`**: It's the 32nd decision logged for this category.
+* `ADR`: This is an Architecture Decision Record.
+* `DATA0140`: The decision relates to "Graph Databases  (`DATA` -> Data Management, `01` -> Databases, `40` -> Graph Databases)"
+* `32`: It's the 32nd decision logged for this category.
 
 #### **Example 2: Requirement**
 
-An ID of **`REQ-SRVC0210-5`** is broken down as:
+An ID of `REQ-SRVC0210-5` is broken down as:
 
-* **`REQ`**: This is a Requirement.
-* **`SRVC0210`**: The requirement relates to "Logging" (`SRVC` -> System Services, `02` -> Observability, `10` -> Logging).
-* **`5`**: It's the 5th requirement defined for the logging category.
+* `REQ`: This is a Requirement.
+* `SRVC0210`: The requirement relates to "Logging" (`SRVC` -> System Services, `02` -> Observability, `10` -> Logging).
+* `5`: It's the 5th requirement defined for the logging category.
 
 ---
 
@@ -56,7 +56,7 @@ An ID of **`REQ-SRVC0210-5`** is broken down as:
 
 The system is designed to be adaptable.
 
-* **Omitting the Prefix:** If your document collection *only* contains requirements, you can omit the `REQ-` prefix for brevity (e.g., **`DATA0140-32`**).
+* **Omitting the Prefix:** If your document collection *only* contains requirements, you can omit the `REQ-` prefix for brevity (e.g., `DATA0140-32`).
 * **Flexible Suffixes:** While simple integers are recommended, the suffix can be any format that suits your project's needs, such as `-1a`, `-v2`, `-3.2` or `-20250716`.
 
 This flexibility makes searching and filtering straightforward. For instance, `grep "ADR-DATA"` would find all architectural decisions related to the data division in documents and source code comments and tags.
@@ -71,7 +71,7 @@ This flexibility makes searching and filtering straightforward. For instance, `g
 
 * **Hierarchical, Scalable & Stable:** The system is inherently hierarchical, reflecting how software components are often organized. New divisions, sections, and items can be added without needing to re-number existing codes.
 
-* **Logical Grouping:** Using a standard count for **Sections** and a "10-series" for **Item codes** (e.g., `10`, `20`, `30`) creates clear, high-level groupings within a section and makes section ids discernably different from item ids. This provides a logical structure while still allowing for numbers in between (e.g., `11`, `12`) if more granular items need to be added later.
+* **Logical Grouping:** Using a standard count for **Sections** and a "10-series" for **Item codes** (e.g., `10`, `20`, `30`) creates clear, high-level groupings within a section and makes section ids discernibly different from item ids. This provides a logical structure while still allowing for numbers in between (e.g., `11`, `12`) if more granular items need to be added later.
 
 ## Releases & Downloads
 
