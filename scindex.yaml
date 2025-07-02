@@ -1,0 +1,250 @@
+# Software Component Index (scindex)
+# Edit this "source of truth" file to maintain the index.
+# Run `python compiler.py` to export to JSON, TOML, etc.
+
+scindex_version: "0.1.0"
+divisions:
+  - id: "DATA"
+    name: "DATA MANAGEMENT"
+    description: "This division is dedicated to how data is stored, retrieved, structured, and managed."
+    sections:
+      - id: "01"
+        name: "Databases"
+        items:
+          - id: "10"
+            name: "Relational Databases"
+            examples: ["PostgreSQL", "MySQL"]
+          - id: "20"
+            name: "NoSQL Databases"
+            examples: ["MongoDB", "DynamoDB"]
+          - id: "30"
+            name: "Time-Series Databases"
+            examples: ["InfluxDB"]
+          - id: "40"
+            name: "Graph Databases"
+            examples: ["Neo4j"]
+      - id: "02"
+        name: "Caching"
+        items:
+          - id: "10"
+            name: "In-Memory Caches"
+            examples: ["Redis", "Memcached"]
+          - id: "20"
+            name: "Content Delivery Networks (CDN)"
+          - id: "30"
+            name: "Client-Side Caching"
+      - id: "03"
+        name: "Storage Systems & Abstractions"
+        items:
+          - id: "10"
+            name: "Object Storage"
+            examples: ["S3", "Google Cloud Storage"]
+          - id: "20"
+            name: "Block Storage & File Systems"
+          - id: "30"
+            name: "Object-Relational Mappers (ORM)"
+      - id: "04"
+        name: "Data Schemas & Models"
+        items:
+          - id: "10"
+            name: "Database Schemas & Migrations"
+          - id: "20"
+            name: "Data Serialization Formats"
+            examples: ["JSON", "XML", "Protocol Buffers"]
+  - id: "PLAT"
+    name: "PLATFORM & INFRASTRUCTURE"
+    description: "This division covers the foundational components on which the software operates."
+    sections:
+      - id: "01"
+        name: "Compute"
+        items:
+          - id: "10"
+            name: "Virtual Machines"
+          - id: "20"
+            name: "Containers"
+            examples: ["Docker", "containerd"]
+          - id: "30"
+            name: "Serverless Functions"
+            examples: ["AWS Lambda", "Azure Functions"]
+          - id: "40"
+            name: "Bare Metal / Embedded Processors"
+      - id: "02"
+        name: "Networking"
+        items:
+          - id: "10"
+            name: "Network Protocols (TCP/IP, HTTP, MQTT)"
+          - id: "20"
+            name: "Virtual Networks & Firewalls"
+          - id: "30"
+            name: "Service Discovery & Mesh"
+      - id: "03"
+        name: "Runtime Environments"
+        items:
+          - id: "10"
+            name: "Language Runtimes"
+            examples: ["JVM", "Node.js", "Python Interpreter"]
+          - id: "20"
+            name: "Operating Systems"
+            examples: ["Linux", "Windows", "RTOS"]
+          - id: "30"
+            name: "Hardware Abstraction Layers (HAL)"
+  - id: "SRVC"
+    name: "SYSTEM SERVICES"
+    description: "This division includes cross-cutting concerns and supporting services that are not part of the core application logic."
+    sections:
+      - id: "01"
+        name: "Security"
+        items:
+          - id: "10"
+            name: "Authentication Services"
+            examples: ["OAuth", "SSO"]
+          - id: "20"
+            name: "Authorization & Permissions"
+          - id: "30"
+            name: "Cryptography & Secrets Management"
+          - id: "140"
+            name: "Anomaly & Threat Detection"
+      - id: "02"
+        name: "Observability"
+        items:
+          - id: "10"
+            name: "Logging"
+          - id: "20"
+            name: "Metrics & Monitoring"
+          - id: "30"
+            name: "Tracing & Performance Analysis"
+      - id: "03"
+        name: "Communication"
+        items:
+          - id: "10"
+            name: "Message Queues"
+            examples: ["RabbitMQ", "SQS"]
+          - id: "20"
+            name: "Event Streams"
+            examples: ["Kafka", "Kinesis"]
+          - id: "30"
+            name: "Inter-Process Communication (IPC)"
+      - id: "04"
+        name: "Utilities"
+        items:
+          - id: "10"
+            name: "Configuration Management"
+          - id: "20"
+            name: "Scheduling & Background Jobs"
+          - id: "30"
+            name: "Feature Flagging"
+  - id: "CORE"
+    name: "APPLICATION CORE"
+    description: "This division contains the primary business logic, algorithms, and unique functional components of the software."
+    sections:
+      - id: "01"
+        name: "Business Logic"
+        items:
+          - id: "10"
+            name: "Rules Engines"
+          - id: "20"
+            name: "Domain Logic & Services (including adapters for 3rd-party logic)"
+          - id: "30"
+            name: "Workflow & Orchestration Logic"
+      - id: "02"
+        name: "Data Processing & Algorithms"
+        items:
+          - id: "10"
+            name: "Search & Indexing Algorithms"
+          - id: "20"
+            name: "Machine Learning Models & Inference"
+          - id: "30"
+            name: "Signal & Image Processing"
+          - id: "40"
+            name: "Data Transformation & ETL Logic"
+      - id: "03"
+        name: "State Management"
+        items:
+          - id: "10"
+            name: "Application State"
+          - id: "20"
+            name: "Session Management"
+          - id: "30"
+            name: "Real-Time State Synchronization"
+  - id: "IFAC"
+    name: "INTERFACES"
+    description: "This division covers all components related to interaction with users, devices, or other software systems."
+    sections:
+      - id: "01"
+        name: "Graphical User Interfaces (GUI)"
+        items:
+          - id: "10"
+            name: "Desktop Application Windows"
+            examples: ["WinForms", "Cocoa"]
+          - id: "20"
+            name: "Web Interfaces (HTML, CSS, Web Components)"
+          - id: "30"
+            name: "Mobile Application Screens (iOS/Android native UI)"
+      - id: "02"
+        name: "Non-Graphical Human Interfaces"
+        items:
+          - id: "10"
+            name: "Command Line Interfaces (CLI)"
+          - id: "20"
+            name: "Voice User Interfaces (VUI)"
+            examples: ["Alexa Skills", "Google Actions"]
+          - id: "30"
+            name: "Text-Based User Interfaces (TUI)"
+          - id: "40"
+            name: "Haptic & Tactile Interfaces"
+      - id: "03"
+        name: "Programmatic Interfaces (API)"
+        items:
+          - id: "10"
+            name: "REST APIs"
+          - id: "20"
+            name: "GraphQL APIs"
+          - id: "30"
+            name: "gRPC / RPC Endpoints"
+          - id: "40"
+            name: "Library APIs / SDKs (Provided by this system)"
+          - id: "50"
+            name: "External API Interfaces (Consumed by this system)"
+      - id: "04"
+        name: "Hardware & Sensor Interfaces"
+        items:
+          - id: "10"
+            name: "General Purpose Input/Output (GPIO)"
+          - id: "20"
+            name: "Sensor Data Ingestion"
+            examples: ["accelerometer", "GPS"]
+          - id: "30"
+            name: "Actuator Control"
+  - id: "DIST"
+    name: "DISTRIBUTION & PACKAGING"
+    description: "This division defines the final form of the software product as delivered to the end-user or system."
+    sections:
+      - id: "01"
+        name: "Installable Packages"
+        items:
+          - id: "10"
+            name: "Desktop Installers"
+            examples: ["MSI", "DMG", ".deb"]
+          - id: "20"
+            name: "Mobile App Bundles"
+            examples: ["APK", "IPA"]
+      - id: "02"
+        name: "Deployed Artifacts"
+        items:
+          - id: "10"
+            name: "Container Images"
+            examples: ["Docker Image"]
+          - id: "20"
+            name: "Firmware Images"
+            examples: [".bin", ".hex"]
+          - id: "30"
+            name: "Web Application Builds (e.g., static assets)"
+      - id: "03"
+        name: "Reusable Libraries"
+        items:
+          - id: "10"
+            name: "Published Packages"
+            examples: ["to npm", "PyPI", "Maven"]
+          - id: "20"
+            name: "Shared Libraries"
+            examples: [".dll", ".so"]
