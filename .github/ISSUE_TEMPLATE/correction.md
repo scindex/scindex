@@ -14,7 +14,7 @@ assignees: ''
 
 Please provide the full ID of the entry that needs correction.
 
-- **Full ID:** (e.g., `DATA0120`)
+- **Full ID:** (e.g., `DAT0120`)
 
 ### 2. What is wrong with the current entry?
 

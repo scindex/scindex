@@ -16,11 +16,11 @@ The full pattern is: `[PREFIX]-[Scindex Code]-[SUFFIX]`
 
 The **Scindex Code** is the basis of the system, pinpointing a specific category within the software architecture by concatenating three parts:
 
-* **Division (`DATA`):** A short alphabetic code representing a major architectural area.
+* **Division (`DAT`):** A short alphabetic code representing a major architectural area.
 * **Section (`01`):** A two-digit code for a sub-category within the division.
 * **Item (`40`):** A two-digit code for a specific component type within the section.
 
-For example, the Scindex Code for "Graph Databases" is `DATA0140`.
+For example, the Scindex Code for "Graph Databases" is `DAT0140`.
 
 ---
 
@@ -36,18 +36,18 @@ You create a complete, unique ID by adding a prefix and a suffix to the Scindex 
 
 #### **Example 1: Architecture Decision**
 
-An ID of **`ADR-DATA0140-32`** is broken down as:
+An ID of **`ADR-DAT0140-32`** is broken down as:
 
 * `ADR`: This is an Architecture Decision Record.
-* `DATA0140`: The decision relates to "Graph Databases  (`DATA` -> Data Management, `01` -> Databases, `40` -> Graph Databases)"
+* `DAT0140`: The decision relates to "Graph Databases  (`DAT` -> Data Management, `01` -> Databases, `40` -> Graph Databases)"
 * `32`: It's the 32nd decision logged for this category.
 
 #### **Example 2: Requirement**
 
-An ID of `REQ-SRVC0210-5` is broken down as:
+An ID of `REQ-SER0210-5` is broken down as:
 
 * `REQ`: This is a Requirement.
-* `SRVC0210`: The requirement relates to "Logging" (`SRVC` -> System Services, `02` -> Observability, `10` -> Logging).
+* `SER0210`: The requirement relates to "Logging" (`SER` -> System Services, `02` -> Observability, `10` -> Logging).
 * `5`: It's the 5th requirement defined for the logging category.
 
 ---
@@ -56,18 +56,18 @@ An ID of `REQ-SRVC0210-5` is broken down as:
 
 The system is designed to be adaptable.
 
-* **Omitting the Prefix:** If your document collection *only* contains requirements, you can omit the `REQ-` prefix for brevity (e.g., `DATA0140-32`).
+* **Omitting the Prefix:** If your document collection *only* contains requirements, you can omit the `REQ-` prefix for brevity (e.g., `DAT0140-32`).
 * **Flexible Suffixes:** While simple integers are recommended, the suffix can be any format that suits your project's needs, such as `-1a`, `-v2`, `-3.2` or `-20250716`.
 
-This flexibility makes searching and filtering straightforward. For instance, `grep "ADR-DATA"` would find all architectural decisions related to the data division in documents and source code comments and tags.
+This flexibility makes searching and filtering straightforward. For instance, `grep "ADR-DAT"` would find all architectural decisions related to the data division in documents and source code comments and tags.
 
 ## Key Features
 
-* **Human-Readable:** The codes are designed to be quickly understood by people. The use of alphabetic **Division codes** (e.g., `DATA`, `SRVC`) provides immediate context without implying a rigid order, while the numeric components are easy to scan.
+* **Human-Readable:** The codes are designed to be quickly understood by people. The use of alphabetic **Division codes** (e.g., `DAT`, `SER`) provides immediate context without implying a rigid order, while the numeric components are easy to scan.
 
-* **Sayable:** The structure is meant to be spoken easily in conversations. For example, the code `DATA0140` is simply said as "data one-forty," which simplifies communication between team members.
+* **Sayable:** The structure is meant to be spoken easily in conversations. For example, the code `DAT0140` is simply said as "data oh one-forty," which simplifies communication between team members.
 
-* **Predictable Structure:** The standard `[DIVISION][SECTION][ITEM]` format (e.g., `DATA0140`) has a consistent length, which makes it reliable for automated parsing, pattern-based validation, and use in other tooling.
+* **Predictable Structure:** The standard `[DIVISION][SECTION][ITEM]` format (e.g., `DAT0140`) has a consistent length, which makes it reliable for automated parsing, pattern-based validation, and use in other tooling.
 
 * **Hierarchical, Scalable & Stable:** The system is inherently hierarchical, reflecting how software components are often organized. New divisions, sections, and items can be added without needing to re-number existing codes.
 
