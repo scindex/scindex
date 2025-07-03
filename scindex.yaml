@@ -4,7 +4,7 @@
 
 scindex_version: "0.1.0"
 divisions:
-  - id: "DATA"
+  - id: "DAT"
     name: "DATA MANAGEMENT"
     description: "This division is dedicated to how data is stored, retrieved, structured, and managed."
     sections:
@@ -51,7 +51,7 @@ divisions:
           - id: "20"
             name: "Data Serialization Formats"
             examples: ["JSON", "XML", "Protocol Buffers"]
-  - id: "PLAT"
+  - id: "PLA"
     name: "PLATFORM & INFRASTRUCTURE"
     description: "This division covers the foundational components on which the software operates."
     sections:
@@ -88,7 +88,7 @@ divisions:
             examples: ["Linux", "Windows", "RTOS"]
           - id: "30"
             name: "Hardware Abstraction Layers (HAL)"
-  - id: "SRVC"
+  - id: "SER"
     name: "SYSTEM SERVICES"
     description: "This division includes cross-cutting concerns and supporting services that are not part of the core application logic."
     sections:
@@ -133,7 +133,7 @@ divisions:
             name: "Scheduling & Background Jobs"
           - id: "30"
             name: "Feature Flagging"
-  - id: "CORE"
+  - id: "COR"
     name: "APPLICATION CORE"
     description: "This division contains the primary business logic, algorithms, and unique functional components of the software."
     sections:
@@ -166,7 +166,7 @@ divisions:
             name: "Session Management"
           - id: "30"
             name: "Real-Time State Synchronization"
-  - id: "IFAC"
+  - id: "INT"
     name: "INTERFACES"
     description: "This division covers all components related to interaction with users, devices, or other software systems."
     sections:
@@ -215,7 +215,7 @@ divisions:
             examples: ["accelerometer", "GPS"]
           - id: "30"
             name: "Actuator Control"
-  - id: "DIST"
+  - id: "DIS"
     name: "DISTRIBUTION & PACKAGING"
     description: "This division defines the final form of the software product as delivered to the end-user or system."
     sections:
