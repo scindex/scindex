@@ -85,7 +85,7 @@ Each release includes the complete index in several convenient formats:
 To get the latest version, please visit the official **[Releases Page](https://github.com/scindex/scindex/releases)**, where you can download the files for the version you need.
 
 ---
-Scindex is happily ❤️ and meticulously 🧐 maintained by [F39](https://www.f39.design/)
+Scindex is joyously ❤️ and meticulously 🧐 maintained by [F39](https://www.f39.design/)
 
 
 

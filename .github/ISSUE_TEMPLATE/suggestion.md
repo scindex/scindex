@@ -14,8 +14,8 @@ assignees: ''
 
 Where should this new entry live? Please specify its parent Division and Section.
 
-- **Parent Division ID:** (e.g., `DATA`, `SRVC`, `CORE`)
-- **Parent Section ID:** (e.g., `DATA01`, `SRVC03`)
+- **Parent Division ID:** (e.g., `DAT`, `SER`, `COR`)
+- **Parent Section ID:** (e.g., `DAT01`, `SER03`)
 - **Proposed Name:** (e.g., "Vector Databases", "Service Mesh")
 
 ### 2. Description
