@@ -9,6 +9,28 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## Added
+- data -> data transport & protocols -> real-time messaging protocols
+- data -> data transport & protocols -> data marshalling & ipc formats
+- data -> data transport & protocols -> bit-encoding formats
+- data -> data transport & protocols -> data subscription & publication models
+- data -> data integrity & validation -> checksums & hashing
+- data -> data integrity & validation -> data validation schemas & rules engines
+- data -> data integrity & validation -> error detection & correctioncodes
+- data -> data integrity & validation -> in-memory & volatile data
+- data -> data integrity & validation -> shared memory segments
+- data -> data integrity & validation -> in-process data stores
+- data -> data integrity & validation -> volatile configuration & status registers
+- platform -> compute -> hardware accel.
+- platform -> networking -> real-time & hpc interconnects
+- platform -> orchestration & management -> container orchestration
+- platform -> orchestration & management -> infrastructure provisioning & IaC
+- platform -> orchestration & management -> cluster management
+- platform -> system startup & firmware -> bootloaders
+- platform -> system startup & firmware -> device drivers
+- platform -> system startup & firmware -> firmware update agents
+
+
 ### Fixed
 - Cut Division code to 3 alpha characters for compactness + readability
 
