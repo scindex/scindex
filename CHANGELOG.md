@@ -29,6 +29,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - platform -> system startup & firmware -> bootloaders
 - platform -> system startup & firmware -> device drivers
 - platform -> system startup & firmware -> firmware update agents
+- examples of in-mem and volitile data
+- descriptions and examples for all sections and items
+- cut divisions to single character
 
 
 ### Fixed

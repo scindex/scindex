@@ -4,7 +4,7 @@
 
 scindex_version: "0.2.0"
 divisions:
-  - id: "DAT"
+  - id: "D"
     name: "DATA MANAGEMENT"
     description: "This division is dedicated to how data is stored, retrieved, structured, and managed."
     sections:
@@ -120,7 +120,7 @@ divisions:
             name: "Volatile Configuration & Status Registers"
             description: "Low-level hardware registers used to control device operations, configure peripherals, or read status flags. Data is volatile and lost on power-off."
             examples: ["GPIO Control Registers", "DMA Controller Registers", "CPU Flags"]
-  - id: "PLA"
+  - id: "P"
     name: "PLATFORM & INFRASTRUCTURE"
     description: "This division covers the foundational components on which the software operates."
     sections:
@@ -216,7 +216,7 @@ divisions:
             name: "Firmware Update Agents"
             description: "Software components responsible for securely and reliably updating the firmware of a device, often over-the-air (OTA), to add features or patch vulnerabilities."
             examples: ["OTA Clients", "Secure Update Handlers"]
-  - id: "SER"
+  - id: "S"
     name: "SYSTEM SERVICES"
     description: "This division includes cross-cutting concerns and supporting services that are not part of the core application logic."
     sections:
@@ -336,7 +336,7 @@ divisions:
             name: "Graceful Degradation & Recovery Services"
             description: "Strategies that allow a system to continue operating at a reduced level of functionality during failures, rather than failing completely."
             examples: ["Circuit Breaker Pattern", "Load Shedding", "Safe Mode Operation"]
-  - id: "COR"
+  - id: "C"
     name: "APPLICATION CORE"
     description: "This division contains the primary business logic, algorithms, and unique functional components of the software."
     sections:
@@ -444,7 +444,7 @@ divisions:
             name: "Time-Triggered Logic"
             description: "A model where actions are triggered at predetermined points in time, common in safety-critical and real-time systems."
             examples: ["Time-Triggered Architectures (TTA)"]
-  - id: "INT"
+  - id: "I"
     name: "INTERFACES"
     description: "This division covers all components related to interaction with users, devices, or other software systems."
     sections:
@@ -524,7 +524,7 @@ divisions:
             name: "Actuator Control"
             description: "The control of mechanical or electrical devices that perform a physical action, such as motors, valves, or switches."
             examples: ["PWM Servo Control", "Stepper Motor Drivers"]
-  - id: "DIS"
+  - id: "N"
     name: "DISTRIBUTION & PACKAGING"
     description: "This division defines the final form of the software product as delivered to the end-user or system."
     sections:
