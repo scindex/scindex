@@ -32,6 +32,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - examples of in-mem and volitile data
 - descriptions and examples for all sections and items
 - cut divisions to single character
+- general division
+- iot hub example docs
 
 
 ### Fixed

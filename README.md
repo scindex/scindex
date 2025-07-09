@@ -65,7 +65,7 @@ This flexibility makes searching and filtering straightforward. For instance, `g
 
 * **Human-Readable:** The codes are designed to be quickly understood by people. The use of alphabetic **Division codes** (e.g., `D`, `S`) provides immediate context without implying a rigid order, while the numeric components are easy to scan.
 
-* **Sayable:** The structure is meant to be spoken easily in conversations. For example, the code `D0140` is simply said as "data oh one-forty," which simplifies communication between team members.
+* **Sayable:** The structure is meant to be spoken easily in conversations. For example, the code `D0140` is simply said as "data one-forty," or "data one-forty" which simplifies communication between team members.
 
 * **Predictable Structure:** The standard `[DIVISION][SECTION][ITEM]` format (e.g., `D0140`) has a consistent length, which makes it reliable for automated parsing, pattern-based validation, and use in other tooling.
 

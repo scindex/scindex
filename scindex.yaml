@@ -4,6 +4,80 @@
 
 scindex_version: "0.2.0"
 divisions:
+  - id: "G"
+    name: "GENERAL"
+    description: "This division covers overarching standards, processes, and methodologies related to how the project is managed and how the software is developed."
+    sections:
+      - id: "01"
+        name: "Project Management & Methodology"
+        description: "Covers the processes for planning, executing, and managing project work."
+        items:
+          - id: "10"
+            name: "Work Planning & Execution"
+            description: "Defines the methodology for breaking down project work and the cadence of execution, from high-level phases or epics to individual tasks."
+            examples: ["Work Breakdown Structure (WBS)", "Agile Epics & Stories", "Project Phases & Gates", "Kanban Policies"]
+          - id: "20"
+            name: "Release Planning & Coordination"
+            description: "The process for planning, scheduling, and coordinating software releases, including versioning strategy."
+            examples: ["Release Train Schedule", "Semantic Versioning Policy", "Go/No-Go Checklists"]
+          - id: "30"
+            name: "Decision Making & Governance"
+            description: "The formal process for making and recording architectural or significant technical decisions."
+            examples: ["Architecture Decision Record (ADR) Process", "Technical Steering Committee Charter"]
+          - id: "40"
+            name: "Team Roles & Responsibilities"
+            description: "Defines the key roles within the project team and their primary responsibilities."
+            examples: ["RACI Matrix", "Product Owner vs Project Manager", "Architect Role"]
+      - id: "02"
+        name: "Development Standards & Conventions"
+        description: "Covers coding standards and conventions to ensure consistency and quality."
+        items:
+          - id: "10"
+            name: "Code Formatting & Style"
+            description: "Rules for code formatting, including line length, indentation, and style guidelines enforced by linters."
+            examples: ["Prettier/ESLint Config", "Black Formatter Rules", "EditorConfig"]
+          - id: "20"
+            name: "Identifier & Naming Conventions"
+            description: "Guidelines for naming variables, functions, classes, database tables, and other identifiers."
+            examples: ["Variable Naming (camelCase, snake_case)", "API Endpoint Naming", "Git Branch Naming"]
+          - id: "30"
+            name: "Scindex Usage & Suffix Rules"
+            description: "Specific rules governing how Scindex codes and suffixes are applied within the project."
+            examples: ["ADR Suffix Rules", "Requirement Suffix Format"]
+      - id: "03"
+        name: "Quality & Testing Strategy"
+        description: "Defines the overall approach to ensuring software quality."
+        items:
+          - id: "10"
+            name: "Code Review Process"
+            description: "The standards and process for conducting pull request reviews, including required approvals and review etiquette."
+            examples: ["Pull Request Templates", "Mandatory Reviewer Checklists"]
+          - id: "20"
+            name: "Testing Level Definitions"
+            description: "The strategy and scope for different levels of testing, such as unit, integration, and end-to-end (E2E) tests."
+            examples: ["Unit Test Coverage Thresholds", "Integration Test Strategy", "E2E Test Scenarios"]
+      - id: "04"
+        name: "Documentation Standards"
+        description: "Covers requirements for how project and system documentation is created and maintained."
+        items:
+          - id: "10"
+            name: "Documentation Structure & Style"
+      - id: "99"
+        name: "Ancillary Project Records"
+        description: "A section for general project records, administrative notes, and other non-technical information that does not fit into other defined GENERAL sections. This section must NOT be used for technical software components."
+        items:
+          - id: "10"
+            name: "Vendor & Stakeholder Communication"
+            description: "Records of key communications and contact information for external vendors or stakeholders."
+          - id: "20"
+            name: "Budget & Financial Notes"
+            description: "Administrative notes related to project budget, invoicing, or purchasing."
+          - id: "30"
+            name: "Legal & Compliance Memos"
+            description: "Documentation and notes related to legal reviews, compliance requirements, or data privacy impact assessments."
+          - id: "99"
+            name: "Other"
+            description: "A temporary holding category for ancillary, non-technical project records that do not fit into other defined items in this section. This item should be used sparingly. If a recurring theme of records is placed here, a new, more specific item should be proposed."
   - id: "D"
     name: "DATA MANAGEMENT"
     description: "This division is dedicated to how data is stored, retrieved, structured, and managed."
@@ -453,7 +527,7 @@ divisions:
         description: "Visual interfaces that allow users to interact with the software through graphical icons and visual indicators."
         items:
           - id: "10"
-            name: "Desktop Application Windows"
+            name: "Desktop Application Interfaces"
             description: "The native windows and widgets of a desktop operating system's GUI framework."
             examples: ["WinForms", "Cocoa"]
           - id: "20"
@@ -554,9 +628,10 @@ divisions:
             examples: ["Webpack build", "Vite build"]
           - id: "60"
             name: "Published Packages"
-            description: "Libraries published to a public or private package registry (e.g., npm, PyPI, Maven) for easy consumption by other developers."
+            description: "Libraries published to a public or private package registry for easy consumption by other developers."
             examples: ["to npm", "PyPI", "Maven"]
           - id: "70"
             name: "Shared Libraries"
             description: "Libraries that are loaded by programs when they start. They are shared among multiple programs, saving memory and disk space."
             examples: [".dll", ".so"]
+
