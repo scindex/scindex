@@ -4,7 +4,6 @@ import json
 import toml
 import argparse
 import os
-# <-- 1. The 'sentence_transformers' import is REMOVED from the top of the file.
 
 def generate_full_ids(data):
     # Traverses the scindex and create full codes
