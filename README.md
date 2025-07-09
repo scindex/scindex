@@ -10,6 +10,8 @@ Scindex provides a structured core identifier that can be flexibly prefixed and 
 
 The full pattern is: `[PREFIX]-[Scindex Code]-[SUFFIX]`
 
+See the examples directory for sample document sets that make use of scindex-based IDs.
+
 ---
 
 ### **Core Concept: The Scindex Code**
@@ -17,7 +19,7 @@ The full pattern is: `[PREFIX]-[Scindex Code]-[SUFFIX]`
 The **Scindex Code** is the basis of the system, pinpointing a specific category within the software architecture by concatenating three parts:
 
 * **Division (`D`):** An alphabetic character code representing a major architectural area.
-* **Section (`01`):** A two-digit code for a sub-category within the division.
+* **Section (`01`):** A two-digit code for a section within the division.
 * **Item (`40`):** A two-digit code for a specific component type within the section.
 
 For example, the Scindex Code for "Graph Databases" is `D0140`.

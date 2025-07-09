@@ -20,8 +20,8 @@ There are two primary ways to contribute to the index:
 
 Unsure where to begin? You can start by looking through `needs-review` issues:
 
-* **[Suggestions needing review](https://github.com/your-username/scindex/labels/suggestion)**: These are proposed new entries that need discussion and feedback from the community.
-* **[Corrections needing review](https://github.com/your-username/scindex/labels/correction)**: These are proposed fixes that need validation.
+* **[Suggestions needing review](https://github.com/scindex/scindex/labels/suggestion)**: These are proposed new entries that need discussion and feedback from the community.
+* **[Corrections needing review](https://github.com/scindex/scindex/labels/correction)**: These are proposed fixes that need validation.
 
 ### The Contribution Workflow
 
