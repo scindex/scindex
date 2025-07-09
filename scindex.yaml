@@ -4,8 +4,8 @@
 
 scindex_version: "0.2.0"
 divisions:
-  - id: "G"
-    name: "GENERAL"
+  - id: "M"
+    name: "METHODOLOGY & CONVENTIONS"
     description: "This division covers overarching standards, processes, and methodologies related to how the project is managed and how the software is developed."
     sections:
       - id: "01"
@@ -28,6 +28,18 @@ divisions:
             name: "Team Roles & Responsibilities"
             description: "Defines the key roles within the project team and their primary responsibilities."
             examples: ["RACI Matrix", "Product Owner vs Project Manager", "Architect Role"]
+          - id: "50"
+            name: "Vendor & Stakeholder Communication Process"
+            description: "Contact information and communications proceess for external vendors or stakeholders."
+          - id: "60"
+            name: "Budget & Financial Process"
+            description: "Administrative processes related to project budget, invoicing, or purchasing."
+          - id: "70"
+            name: "Legal & Compliance Adherence"
+            description: "Documentation records and notes related to legal reviews, compliance requirements, or data privacy impact assessments."
+          - id: "99"
+            name: "Provisional Project Management & Methodology Item"
+            description: "A temporary holding category for Project Management & Methodology items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "02"
         name: "Development Standards & Conventions"
         description: "Covers coding standards and conventions to ensure consistency and quality."
@@ -44,6 +56,9 @@ divisions:
             name: "Scindex Usage & Suffix Rules"
             description: "Specific rules governing how Scindex codes and suffixes are applied within the project."
             examples: ["ADR Suffix Rules", "Requirement Suffix Format"]
+          - id: "99"
+            name: "Provisional Development Standards & Conventions Item"
+            description: "A temporary holding category for Development Standards & Conventions items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "03"
         name: "Quality & Testing Strategy"
         description: "Defines the overall approach to ensuring software quality."
@@ -56,28 +71,25 @@ divisions:
             name: "Testing Level Definitions"
             description: "The strategy and scope for different levels of testing, such as unit, integration, and end-to-end (E2E) tests."
             examples: ["Unit Test Coverage Thresholds", "Integration Test Strategy", "E2E Test Scenarios"]
+          - id: "99"
+            name: "Provisional Quality & Testing Strategy Item"
+            description: "A temporary holding category for Quality & Testing Strategy items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "04"
         name: "Documentation Standards"
         description: "Covers requirements for how project and system documentation is created and maintained."
         items:
           - id: "10"
             name: "Documentation Structure & Style"
-      - id: "99"
-        name: "Ancillary Project Records"
-        description: "A section for general project records, administrative notes, and other non-technical information that does not fit into other defined GENERAL sections. This section must NOT be used for technical software components."
-        items:
-          - id: "10"
-            name: "Vendor & Stakeholder Communication"
-            description: "Records of key communications and contact information for external vendors or stakeholders."
-          - id: "20"
-            name: "Budget & Financial Notes"
-            description: "Administrative notes related to project budget, invoicing, or purchasing."
-          - id: "30"
-            name: "Legal & Compliance Memos"
-            description: "Documentation and notes related to legal reviews, compliance requirements, or data privacy impact assessments."
           - id: "99"
-            name: "Other"
-            description: "A temporary holding category for ancillary, non-technical project records that do not fit into other defined items in this section. This item should be used sparingly. If a recurring theme of records is placed here, a new, more specific item should be proposed."
+            name: "Provisional Documentation Standards Item"
+            description: "A temporary holding category for Documentation Standards items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
+      - id: "99"
+        name: "Provisional METHODOLOGY & CONVENTIONS Section"
+        description: "A temporary holding section for METHODOLOGY & CONVENTIONS components that do not fit into any other defined section. Use sparingly and submit a 'Suggestion' issue to have a formal section added."
+        items:
+          - id: "99"
+            name: "Uncategorized METHODOLOGY & CONVENTIONS Component"
+            description: "A provisional item for a component in the METHODOLOGY & CONVENTIONS division that lacks a formal section or item category. Please open a 'Suggestion' issue to have this component and its category formally added."
   - id: "D"
     name: "DATA MANAGEMENT"
     description: "This division is dedicated to how data is stored, retrieved, structured, and managed."
@@ -102,6 +114,9 @@ divisions:
             name: "Graph Databases"
             description: "Databases that use graph structures with nodes, edges, and properties to represent and store data. Ideal for managing highly connected data and complex relationships."
             examples: ["Neo4j"]
+          - id: "99"
+            name: "Provisional Databases Item"
+            description: "A temporary holding category for Databases items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "02"
         name: "Caching"
         description: "Focuses on temporary data storage to reduce latency. Includes in-memory caches for rapid access, CDNs for distributed content, and client-side caching to improve user experience."
@@ -118,6 +133,9 @@ divisions:
             name: "Client-Side Caching"
             description: "Storing data directly on the user's device (e.g., in a web browser) to speed up repeat visits, reduce network requests, and enable offline functionality."
             examples: ["Browser Cache", "Service Worker Cache"]
+          - id: "99"
+            name: "Provisional Caching Item"
+            description: "A temporary holding category for Caching items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "03"
         name: "Storage Systems & Abstractions"
         description: "Deals with underlying storage tech and access patterns. Covers object/block storage, file systems, and ORMs that bridge application code and relational databases."
@@ -134,6 +152,9 @@ divisions:
             name: "Object-Relational Mappers (ORM)"
             description: "Libraries that provide an abstraction layer to convert data between object-oriented programming languages and relational databases, simplifying data access."
             examples: ["SQLAlchemy", "Hibernate", "Entity Framework"]
+          - id: "99"
+            name: "Provisional Storage Systems & Abstractions Item"
+            description: "A temporary holding category for Storage Systems & Abstractions items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "04"
         name: "Data Structure & Integrity"
         description: "Defines data structure, serialization, and validation. Covers schemas, migrations, data formats, and integrity checks like hashing and error correction to ensure data quality."
@@ -158,6 +179,9 @@ divisions:
             name: "Error Detection & Correction Codes"
             description: "Algorithms that add redundant data to messages, allowing the receiver to detect and, in some cases, correct errors that occurred during transmission or storage."
             examples: ["Reed-Solomon", "Hamming codes"]
+          - id: "99"
+            name: "Provisional Data Structure & Integrity Item"
+            description: "A temporary holding category for Data Structure & Integrity items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "05"
         name: "Data Transport & Protocols"
         description: "Encompasses methods for moving data between systems. Covers real-time messaging, high-performance serialization formats, and publish/subscribe communication models."
@@ -178,6 +202,9 @@ divisions:
             name: "Data Subscription & Publication Models"
             description: "Communication patterns where message producers (publishers) send messages to channels, and consumers (subscribers) receive them, decoupling senders and receivers."
             examples: ["Pub/Sub", "Observer Pattern"]
+          - id: "99"
+            name: "Provisional Data Transport & Protocols Item"
+            description: "A temporary holding category for Data Transport & Protocols items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "06"
         name: "In-Memory & Volatile Data"
         description: "Covers data held temporarily in memory. This includes shared memory for IPC, in-process stores for application state, and hardware registers for low-level control."
@@ -194,6 +221,16 @@ divisions:
             name: "Volatile Configuration & Status Registers"
             description: "Low-level hardware registers used to control device operations, configure peripherals, or read status flags. Data is volatile and lost on power-off."
             examples: ["GPIO Control Registers", "DMA Controller Registers", "CPU Flags"]
+          - id: "99"
+            name: "Provisional In-Memory & Volatile Data Item"
+            description: "A temporary holding category for In-Memory & Volatile Data items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
+      - id: "99"
+        name: "Provisional DATA MANAGEMENT Section"
+        description: "A temporary holding section for DATA MANAGEMENT components that do not fit into any other defined section. Use sparingly and submit a 'Suggestion' issue to have a formal section added."
+        items:
+          - id: "99"
+            name: "Uncategorized DATA MANAGEMENT Component"
+            description: "A provisional item for a component in the DATA MANAGEMENT division that lacks a formal section or item category. Please open a 'Suggestion' issue to have this component and its category formally added."
   - id: "P"
     name: "PLATFORM & INFRASTRUCTURE"
     description: "This division covers the foundational components on which the software operates."
@@ -222,6 +259,9 @@ divisions:
             name: "Hardware Acceleration"
             description: "Specialized hardware (GPUs, FPGAs, ASICs) used to perform specific tasks more efficiently than a general-purpose CPU, often for graphics, AI, or scientific computing."
             examples: ["FPGA", "GPU", "ASIC"]
+          - id: "99"
+            name: "Provisional Compute Item"
+            description: "A temporary holding category for Compute items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "02"
         name: "Networking"
         description: "Communication infrastructure. Defines protocols, virtual networks, firewalls, service discovery for microservices, and high-performance interconnects for specialized systems."
@@ -242,6 +282,9 @@ divisions:
             name: "Real-Time & HPC Interconnects"
             description: "High-bandwidth, low-latency networking technologies designed for demanding applications like high-performance computing (HPC), real-time systems, and data centers."
             examples: ["InfiniBand", "Time-Sensitive Networking (TSN)", "DDS"]
+          - id: "99"
+            name: "Provisional Networking Item"
+            description: "A temporary holding category for Networking items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "03"
         name: "Runtime Environments"
         description: "The environment in which a program is executed. Includes language-specific runtimes, the underlying operating system, and hardware abstraction layers (HALs)."
@@ -258,6 +301,9 @@ divisions:
             name: "Hardware Abstraction Layers (HAL)"
             description: "An abstraction layer between a computer's physical hardware and its software. It provides a consistent interface for applications, hiding hardware-specific details."
             examples: ["CMSIS", "Android HAL"]
+          - id: "99"
+            name: "Provisional Runtime Environments Item"
+            description: "A temporary holding category for Runtime Environments items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "04"
         name: "Orchestration & Management"
         description: "Tools for automating the deployment, management, scaling, and networking of containerized applications and infrastructure."
@@ -274,6 +320,9 @@ divisions:
             name: "Cluster Management"
             description: "Software that manages a collection of computer servers (a cluster) as a single system, handling resource allocation, scheduling, and fault tolerance."
             examples: ["Apache Mesos", "HashiCorp Nomad"]
+          - id: "99"
+            name: "Provisional Orchestration & Management Item"
+            description: "A temporary holding category for Orchestration & Management items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "05"
         name: "System Startup & Firmware"
         description: "Low-level software that initializes hardware during the boot process. Includes bootloaders, device drivers, and firmware update mechanisms."
@@ -290,6 +339,16 @@ divisions:
             name: "Firmware Update Agents"
             description: "Software components responsible for securely and reliably updating the firmware of a device, often over-the-air (OTA), to add features or patch vulnerabilities."
             examples: ["OTA Clients", "Secure Update Handlers"]
+          - id: "99"
+            name: "Provisional System Startup & Firmware Item"
+            description: "A temporary holding category for System Startup & Firmware items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
+      - id: "99"
+        name: "Provisional PLATFORM & INFRASTRUCTURE Section"
+        description: "A temporary holding section for PLATFORM & INFRASTRUCTURE components that do not fit into any other defined section. Use sparingly and submit a 'Suggestion' issue to have a formal section added."
+        items:
+          - id: "99"
+            name: "Uncategorized PLATFORM & INFRASTRUCTURE Component"
+            description: "A provisional item for a component in the PLATFORM & INFRASTRUCTURE division that lacks a formal section or item category. Please open a 'Suggestion' issue to have this component and its category formally added."
   - id: "S"
     name: "SYSTEM SERVICES"
     description: "This division includes cross-cutting concerns and supporting services that are not part of the core application logic."
@@ -314,6 +373,9 @@ divisions:
             name: "Anomaly & Threat Detection"
             description: "Monitor and analyze system activity to identify potential security threats, intrusions, or unusual behavior in real-time."
             examples: ["Snort", "Falco"]
+          - id: "99"
+            name: "Provisional Security Item"
+            description: "A temporary holding category for Security items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "02"
         name: "Observability"
         description: "Provides insights into system behavior through logs, metrics, and traces, enabling debugging, monitoring, and performance analysis."
@@ -330,6 +392,9 @@ divisions:
             name: "Tracing & Performance Analysis"
             description: "Track requests as they flow through a distributed system, providing insights into latency, dependencies, and performance bottlenecks."
             examples: ["Jaeger", "Zipkin", "OpenTelemetry"]
+          - id: "99"
+            name: "Provisional Observability Item"
+            description: "A temporary holding category for Observability items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "03"
         name: "Communication"
         description: "Mechanisms for data exchange between different parts of a system or between different systems."
@@ -346,6 +411,9 @@ divisions:
             name: "Inter-Process Communication (IPC)"
             description: "Mechanisms that allow different processes on the same machine to communicate and synchronize their actions."
             examples: ["Pipes", "Sockets", "Shared Memory"]
+          - id: "99"
+            name: "Provisional Communication Item"
+            description: "A temporary holding category for Communication items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "04"
         name: "Utilities"
         description: "General-purpose supporting services that provide common functionalities across the application."
@@ -362,6 +430,9 @@ divisions:
             name: "Feature Flagging"
             description: "Enable or disable functionality dynamically without deploying new code, allowing for A/B testing, canary releases, and controlled rollouts."
             examples: ["LaunchDarkly", "Flagsmith"]
+          - id: "99"
+            name: "Provisional Utilities Item"
+            description: "A temporary holding category for Utilities items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "05"
         name: "Memory Management"
         description: "Techniques for efficient allocation, usage, and freeing of memory resources."
@@ -378,6 +449,9 @@ divisions:
             name: "Memory Safety & Leak Detection"
             description: "Tools and techniques to prevent memory-related bugs like buffer overflows and to identify memory that is no longer used but not released."
             examples: ["Valgrind", "AddressSanitizer (ASan)", "Rust Borrow Checker"]
+          - id: "99"
+            name: "Provisional Memory Management Item"
+            description: "A temporary holding category for Memory Management items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "06"
         name: "Concurrency & Synchronization"
         description: "Manages the simultaneous execution of multiple tasks and ensures safe access to shared resources."
@@ -394,6 +468,9 @@ divisions:
             name: "Deadlock Detection & Prevention"
             description: "Algorithms and strategies to identify and resolve or prevent circular dependencies between threads waiting for resources."
             examples: ["Lock Ordering", "Wait-for Graph Analysis", "Banker's Algorithm"]
+          - id: "99"
+            name: "Provisional Concurrency & Synchronization Item"
+            description: "A temporary holding category for Concurrency & Synchronization items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "07"
         name: "Fault Tolerance & Resilience"
         description: "Ensures the system remains operational despite failures. Includes health monitoring, redundancy, and graceful degradation."
@@ -410,6 +487,16 @@ divisions:
             name: "Graceful Degradation & Recovery Services"
             description: "Strategies that allow a system to continue operating at a reduced level of functionality during failures, rather than failing completely."
             examples: ["Circuit Breaker Pattern", "Load Shedding", "Safe Mode Operation"]
+          - id: "99"
+            name: "Provisional Fault Tolerance & Resilience Item"
+            description: "A temporary holding category for Fault Tolerance & Resilience items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
+      - id: "99"
+        name: "Provisional SYSTEM SERVICES Section"
+        description: "A temporary holding section for SYSTEM SERVICES components that do not fit into any other defined section. Use sparingly and submit a 'Suggestion' issue to have a formal section added."
+        items:
+          - id: "99"
+            name: "Uncategorized SYSTEM SERVICES Component"
+            description: "A provisional item for a component in the SYSTEM SERVICES division that lacks a formal section or item category. Please open a 'Suggestion' issue to have this component and its category formally added."
   - id: "C"
     name: "APPLICATION CORE"
     description: "This division contains the primary business logic, algorithms, and unique functional components of the software."
@@ -430,6 +517,9 @@ divisions:
             name: "Workflow & Orchestration Logic"
             description: "Manages the sequence of tasks and interactions required to complete a business process, often spanning multiple services."
             examples: ["Camunda", "AWS Step Functions"]
+          - id: "99"
+            name: "Provisional Business Logic Item"
+            description: "A temporary holding category for Business Logic items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "02"
         name: "Data Processing & Algorithms"
         description: "Core algorithms for transforming, analyzing, and processing data to generate insights or new information."
@@ -450,6 +540,9 @@ divisions:
             name: "Data Transformation & ETL Logic"
             description: "Processes for extracting data from sources, transforming it into a desired format, and loading it into a target system (Extract, Transform, Load)."
             examples: ["Apache Spark", "Pandas", "dbt"]
+          - id: "99"
+            name: "Provisional Data Processing & Algorithms Item"
+            description: "A temporary holding category for Data Processing & Algorithms items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "03"
         name: "State Management"
         description: "Manages the state of the application, including user sessions and real-time data synchronization."
@@ -466,6 +559,9 @@ divisions:
             name: "Real-Time State Synchronization"
             description: "Ensuring that state is kept consistent across multiple clients or between client and server in real-time applications."
             examples: ["Firebase Realtime Database", "Socket.IO"]
+          - id: "99"
+            name: "Provisional State Management Item"
+            description: "A temporary holding category for State Management items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "04"
         name: "Execution & Scheduling Models"
         description: "Defines how and when different parts of the code are executed, from real-time schedulers to event-driven models."
@@ -486,6 +582,9 @@ divisions:
             name: "Behavior Trees & State Machines"
             description: "Models for representing and controlling the flow of logic, commonly used in AI, robotics, and game development."
             examples: ["FSMs", "Behavior Trees"]
+          - id: "99"
+            name: "Provisional Execution & Scheduling Models Item"
+            description: "A temporary holding category for Execution & Scheduling Models items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "05"
         name: "Resource Management Logic"
         description: "Logic for allocating and managing system resources like bandwidth, CPU, and power."
@@ -502,6 +601,9 @@ divisions:
             name: "Power Management Logic"
             description: "Algorithms and strategies for optimizing power consumption, especially in battery-powered or embedded devices."
             examples: ["CPU Throttling", "Sleep Modes"]
+          - id: "99"
+            name: "Provisional Resource Management Logic Item"
+            description: "A temporary holding category for Resource Management Logic items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "06"
         name: "Time & Synchronization Logic"
         description: "Manages time within the system, including synchronization with external time sources and logical clocks."
@@ -518,6 +620,16 @@ divisions:
             name: "Time-Triggered Logic"
             description: "A model where actions are triggered at predetermined points in time, common in safety-critical and real-time systems."
             examples: ["Time-Triggered Architectures (TTA)"]
+          - id: "99"
+            name: "Provisional Time & Synchronization Logic Item"
+            description: "A temporary holding category for Time & Synchronization Logic items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
+      - id: "99"
+        name: "Provisional APPLICATION CORE Section"
+        description: "A temporary holding section for APPLICATION CORE components that do not fit into any other defined section. Use sparingly and submit a 'Suggestion' issue to have a formal section added."
+        items:
+          - id: "99"
+            name: "Uncategorized APPLICATION CORE Component"
+            description: "A provisional item for a component in the APPLICATION CORE division that lacks a formal section or item category. Please open a 'Suggestion' issue to have this component and its category formally added."
   - id: "I"
     name: "INTERFACES"
     description: "This division covers all components related to interaction with users, devices, or other software systems."
@@ -538,6 +650,9 @@ divisions:
             name: "Mobile Application Screens (iOS/Android native UI)"
             description: "The native screens and UI components of mobile operating systems like iOS and Android."
             examples: ["SwiftUI", "Jetpack Compose"]
+          - id: "99"
+            name: "Provisional Graphical User Interfaces (GUI) Item"
+            description: "A temporary holding category for Graphical User Interfaces (GUI) items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "02"
         name: "Non-Graphical Human Interfaces"
         description: "Interfaces that allow human interaction without a graphical display, such as command-line, voice, or haptic feedback."
@@ -558,6 +673,9 @@ divisions:
             name: "Haptic & Tactile Interfaces"
             description: "Interfaces that provide feedback to the user through the sense of touch, such as vibrations or force feedback."
             examples: ["Core Haptics", "Vibration API"]
+          - id: "99"
+            name: "Provisional Non-Graphical Human Interfaces Item"
+            description: "A temporary holding category for Non-Graphical Human Interfaces items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "03"
         name: "Programmatic Interfaces (API)"
         description: "Interfaces that allow different software components or systems to communicate with each other."
@@ -582,6 +700,9 @@ divisions:
             name: "External API Interfaces (Consumed by this system)"
             description: "Interfaces that this system uses to communicate with and consume services from third-party systems."
             examples: ["Stripe API", "Twilio API"]
+          - id: "99"
+            name: "Provisional Programmatic Interfaces (API) Item"
+            description: "A temporary holding category for Programmatic Interfaces (API) items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "04"
         name: "Hardware & Sensor Interfaces"
         description: "Interfaces for interacting with physical hardware, sensors, and actuators."
@@ -598,6 +719,61 @@ divisions:
             name: "Actuator Control"
             description: "The control of mechanical or electrical devices that perform a physical action, such as motors, valves, or switches."
             examples: ["PWM Servo Control", "Stepper Motor Drivers"]
+          - id: "99"
+            name: "Provisional Hardware & Sensor Interfaces Item"
+            description: "A temporary holding category for Hardware & Sensor Interfaces items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
+      - id: "05"
+        name: "Diagnostic & Debug Interfaces"
+        items:
+          - id: "10"
+            name: "Debug Ports"
+            examples: ["JTAG", "SWD"]
+          - id: "20"
+            name: "Telemetry & Monitoring Endpoints"
+            examples: ["Prometheus Exporters", "StatsD", "Custom UDP Streams"]
+          - id: "30"
+            name: "Hardware-in-the-Loop (HIL) Interfaces"
+            examples: ["FPGA-based HIL", "dSPACE", "Opal-RT"]
+          - id: "99"
+            name: "Provisional Diagnostic & Debug Interfaces Item"
+            description: "A temporary holding category for Diagnostic & Debug Interfaces items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
+      - id: "06"
+        name: "Industrial & Field Bus Interfaces"
+        items:
+          - id: "10"
+            name: "Automotive Buses"
+            examples: ["CAN bus", "LIN bus", "FlexRay", "Automotive Ethernet"]
+          - id: "20"
+            name: "Industrial Automation Buses"
+            examples: ["Modbus", "PROFIBUS", "EtherCAT"]
+          - id: "30"
+            name: "Avionics Buses"
+            examples: ["ARINC 429", "MIL-STD-1553", "AFDX"]
+          - id: "99"
+            name: "Provisional Industrial & Field Bus Interfaces Item"
+            description: "A temporary holding category for Industrial & Field Bus Interfaces items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
+      - id: "07"
+        name: "System Management & Control Interfaces"
+        items:
+          - id: "10"
+            name: "Baseboard Management Controllers (BMC)"
+            examples: ["IPMI", "Redfish", "iDRAC", "iLO"]
+          - id: "20"
+            name: "Power & Clock Control Interfaces"
+            examples: ["ACPI", "PMBus"]
+          - id: "30"
+            name: "System Health & Environmental Sensors"
+            examples: ["Fan Speed Sensors", "Temperature Sensors", "Voltage Monitors"]
+          - id: "99"
+            name: "Provisional System Management & Control Interfaces Item"
+            description: "A temporary holding category for System Management & Control Interfaces items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
+      - id: "99"
+        name: "Provisional INTERFACES Section"
+        description: "A temporary holding section for INTERFACES components that do not fit into any other defined section. Use sparingly and submit a 'Suggestion' issue to have a formal section added."
+        items:
+          - id: "99"
+            name: "Uncategorized INTERFACES Component"
+            description: "A provisional item for a component in the INTERFACES division that lacks a formal section or item category. Please open a 'Suggestion' issue to have this component and its category formally added."
   - id: "N"
     name: "DISTRIBUTION & PACKAGING"
     description: "This division defines the final form of the software product as delivered to the end-user or system."
@@ -634,4 +810,58 @@ divisions:
             name: "Shared Libraries"
             description: "Libraries that are loaded by programs when they start. They are shared among multiple programs, saving memory and disk space."
             examples: [".dll", ".so"]
-
+          - id: "99"
+            name: "Provisional Packaged & Deployed Artifacts Item"
+            description: "A temporary holding category for Packaged & Deployed Artifacts items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
+      - id: "04"
+        name: "Source & Intermediate Distributions"
+        items:
+          - id: "10"
+            name: "Source Code Archives"
+            examples: [".tar.gz", ".zip"]
+          - id: "20"
+            name: "Build System & Toolchain Packages"
+            examples: ["Yocto Layers", "Buildroot Configs", "Crosstool-NG"]
+          - id: "30"
+            name: "Pre-compiled Object & Static Libraries"
+            examples: [".o", ".a", ".lib"]
+          - id: "99"
+            name: "Provisional Source & Intermediate Distributions Item"
+            description: "A temporary holding category for Source & Intermediate Distributions items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
+      - id: "05"
+        name: "Provisioned Hardware & Appliances"
+        items:
+          - id: "10"
+            name: "Pre-flashed Hardware"
+            examples: ["Pre-flashed Microcontrollers", "Development Kits"]
+          - id: "20"
+            name: "Virtual Appliances"
+            examples: ["OVA", "VHD", "QCOW2"]
+          - id: "30"
+            name: "Bootable Media"
+            examples: ["Live ISOs", "USB Boot Images"]
+          - id: "99"
+            name: "Provisional Provisioned Hardware & Appliances Item"
+            description: "A temporary holding category for Provisioned Hardware & Appliances items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
+      - id: "06"
+        name: "Live & Dynamic Distributions"
+        items:
+          - id: "10"
+            name: "Live Patches & Hotfixes"
+            examples: ["Kernel Live Patches", "Dynamic Hot-swapping"]
+          - id: "20"
+            name: "Dynamic Module Loading"
+            examples: ["Plugin Systems", "Dynamic Library Loading"]
+          - id: "30"
+            name: "Over-the-Air (OTA) Update Payloads"
+            examples: ["Delta Update Packages", "Full Image Updates"]
+          - id: "99"
+            name: "Provisional Live & Dynamic Distributions Item"
+            description: "A temporary holding category for Live & Dynamic Distributions items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
+      - id: "99"
+        name: "Provisional DISTRIBUTION & PACKAGING Section"
+        description: "A temporary holding section for DISTRIBUTION & PACKAGING components that do not fit into any other defined section. Use sparingly and submit a 'Suggestion' issue to have a formal section added."
+        items:
+          - id: "99"
+            name: "Uncategorized DISTRIBUTION & PACKAGING Component"
+            description: "A provisional item for a component in the DISTRIBUTION & PACKAGING division that lacks a formal section or item category. Please open a 'Suggestion' issue to have this component and its category formally added."
