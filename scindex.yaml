@@ -2,7 +2,7 @@
 # Edit this "source of truth" file to maintain the index.
 # Run `python compiler.py` to export to JSON, TOML, etc.
 
-scindex_version: "0.2.0"
+scindex_version: "0.2.1"
 divisions:
   - id: "M"
     name: "METHODOLOGY & CONVENTIONS"
