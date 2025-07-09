@@ -9,7 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## Added
+
+---
+## [0.2.0] - 2025-07-09
+
+### Added
 - data -> data transport & protocols -> real-time messaging protocols
 - data -> data transport & protocols -> data marshalling & ipc formats
 - data -> data transport & protocols -> bit-encoding formats
@@ -35,11 +39,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - general division
 - iot hub example docs
 
-
 ### Fixed
-- Cut Division code to 3 alpha characters for compactness + readability
+- Cut Division code to 1 alpha characters for compactness + readability
 
----
 ## [0.1.1] - 2025-07-02
 
 ### Added
