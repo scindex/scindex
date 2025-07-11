@@ -1,6 +1,6 @@
 # Software Component Index (Scindex)
 
- version: _0.2.1_
+ version: _0.2.2_
  date: _11/07/2025_
 
  ---
