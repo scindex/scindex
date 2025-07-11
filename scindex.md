@@ -1,7 +1,7 @@
 # Software Component Index (Scindex)
 
- version: _0.2.0_
- date: _2025-07-09 17:40:28.400570_
+ version: _0.2.1_
+ date: _11/07/2025_
 
  ---
 
@@ -75,6 +75,7 @@ _Defines the overall approach to ensuring software quality._
 _Covers requirements for how project and system documentation is created and maintained._
 
 - **M0410**: Documentation Structure & Style
+  - *Description*: Defines the required structure, file organization, and content for project documents, along with the official writing style, tone, and terminology to ensure consistency.
 
 - **M0499**: Provisional Documentation Standards Item
   - *Description*: A temporary holding category for Documentation Standards items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex.
@@ -681,42 +682,72 @@ _Interfaces for interacting with physical hardware, sensors, and actuators._
   - *Description*: A temporary holding category for Hardware & Sensor Interfaces items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex.
 
 ### Section: I05 - Diagnostic & Debug Interfaces
+_Covers interfaces used primarily for system diagnostics, debugging, and real-time monitoring, which may be separate from the main application interfaces._
 
 - **I0510**: Debug Ports
+  - *Description*: Low-level hardware interfaces used for in-circuit debugging, programming, and testing of microcontrollers and other integrated circuits.
   - *Examples*: JTAG, SWD
 
 - **I0520**: Telemetry & Monitoring Endpoints
+  - *Description*: Dedicated endpoints for exporting application or system metrics, logs, and telemetry data to monitoring tools.
   - *Examples*: Prometheus Exporters, StatsD, Custom UDP Streams
 
 - **I0530**: Hardware-in-the-Loop (HIL) Interfaces
+  - *Description*: Interfaces that connect a real-time system to a simulated environment, allowing for testing of the system's hardware and software components together.
   - *Examples*: FPGA-based HIL, dSPACE, Opal-RT
 
 - **I0599**: Provisional Diagnostic & Debug Interfaces Item
   - *Description*: A temporary holding category for Diagnostic & Debug Interfaces items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex.
 
 ### Section: I06 - Industrial & Field Bus Interfaces
+_Specialized, often rugged, communication protocols (buses) used for real-time control and data acquisition in industrial, automotive, and avionics environments._
 
 - **I0610**: Automotive Buses
+  - *Description*: Protocols designed for communication between electronic control units (ECUs) within vehicles, optimized for reliability and real-time performance.
   - *Examples*: CAN bus, LIN bus, FlexRay, Automotive Ethernet
 
 - **I0620**: Industrial Automation Buses
+  - *Description*: Protocols used for communication and control of machinery and equipment in industrial settings, such as factory floors and processing plants.
   - *Examples*: Modbus, PROFIBUS, EtherCAT
 
 - **I0630**: Avionics Buses
+  - *Description*: Data buses specifically designed for the high-reliability, safety-critical environment of aircraft and spacecraft electronics.
   - *Examples*: ARINC 429, MIL-STD-1553, AFDX
 
 - **I0699**: Provisional Industrial & Field Bus Interfaces Item
   - *Description*: A temporary holding category for Industrial & Field Bus Interfaces items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex.
 
 ### Section: I07 - System Management & Control Interfaces
+_Interfaces designed for out-of-band management, low-level hardware control, and monitoring of the physical system's health and environment._
 
 - **I0710**: Baseboard Management Controllers (BMC)
+  - *Description*: A specialized service processor on a server motherboard that allows for remote monitoring and management of the host system, independent of the main CPU and OS.
   - *Examples*: IPMI, Redfish, iDRAC, iLO
 
 - **I0720**: Power & Clock Control Interfaces
+  - *Description*: Interfaces and standards for managing the power states, clock speeds, and thermal properties of system components to optimize performance and energy consumption.
   - *Examples*: ACPI, PMBus
 
 - **I0730**: System Health & Environmental Sensors
+  - *Description*: Interfaces for reading data from onboard sensors that monitor the physical health of the system, such as fan speeds, component temperatures, and voltage levels.
+  - *Examples*: Fan Speed Sensors, Temperature Sensors, Voltage Monitors
+
+- **I0799**: Provisional Industrial & Field Bus Interfaces Item
+  - *Description*: A temporary holding category for Industrial & Field Bus Interfaces items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex.
+
+### Section: I07 - System Management & Control Interfaces
+_Interfaces designed for out-of-band management, low-level hardware control, and monitoring of the physical system's health and environment._
+
+- **I0710**: Baseboard Management Controllers (BMC)
+  - *Description*: A specialized service processor on a server motherboard that allows for remote monitoring and management of the host system, independent of the main CPU and OS.
+  - *Examples*: IPMI, Redfish, iDRAC, iLO
+
+- **I0720**: Power & Clock Control Interfaces
+  - *Description*: Interfaces and standards for managing the power states, clock speeds, and thermal properties of system components to optimize performance and energy consumption.
+  - *Examples*: ACPI, PMBus
+
+- **I0730**: System Health & Environmental Sensors
+  - *Description*: Interfaces for reading data from onboard sensors that monitor the physical health of the system, such as fan speeds, component temperatures, and voltage levels.
   - *Examples*: Fan Speed Sensors, Temperature Sensors, Voltage Monitors
 
 - **I0799**: Provisional System Management & Control Interfaces Item
@@ -766,42 +797,54 @@ _The final form of the software as a distributable or deployable unit. Includes 
   - *Description*: A temporary holding category for Packaged & Deployed Artifacts items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex.
 
 ### Section: N04 - Source & Intermediate Distributions
+_Deliverables where the end-user is expected to compile, build, or integrate the software themselves, common for SDKs, embedded systems, and open-source projects._
 
 - **N0410**: Source Code Archives
+  - *Description*: The complete, uncompiled source code of a software project, compressed into a single archive file for distribution.
   - *Examples*: .tar.gz, .zip
 
 - **N0420**: Build System & Toolchain Packages
+  - *Description*: Packages and configuration files for specialized build systems, used to compile a complete, custom operating system and application for a target device.
   - *Examples*: Yocto Layers, Buildroot Configs, Crosstool-NG
 
 - **N0430**: Pre-compiled Object & Static Libraries
+  - *Description*: Files containing compiled code (.o, .obj) or archives of object files (.a, .lib) that are linked into a final executable during the build process.
   - *Examples*: .o, .a, .lib
 
 - **N0499**: Provisional Source & Intermediate Distributions Item
   - *Description*: A temporary holding category for Source & Intermediate Distributions items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex.
 
 ### Section: N05 - Provisioned Hardware & Appliances
+_Covers scenarios where the software is delivered pre-installed on physical hardware or as a complete, self-contained virtual machine image._
 
 - **N0510**: Pre-flashed Hardware
+  - *Description*: Physical hardware, such as microcontrollers or complete devices, that is delivered to the end-user with the software firmware already installed ('flashed').
   - *Examples*: Pre-flashed Microcontrollers, Development Kits
 
 - **N0520**: Virtual Appliances
+  - *Description*: A pre-packaged virtual machine image that contains a pre-configured operating system and all the necessary application software, ready to be run in a hypervisor.
   - *Examples*: OVA, VHD, QCOW2
 
 - **N0530**: Bootable Media
+  - *Description*: A storage medium (e.g., USB drive, CD/DVD, or ISO file) that contains a bootable operating system and application, allowing a user to run the software without installing it on their hard drive.
   - *Examples*: Live ISOs, USB Boot Images
 
 - **N0599**: Provisional Provisioned Hardware & Appliances Item
   - *Description*: A temporary holding category for Provisioned Hardware & Appliances items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex.
 
 ### Section: N06 - Live & Dynamic Distributions
+_Mechanisms for delivering updates or new components to a system that is already running, which is critical for high-availability systems that cannot be shut down._
 
 - **N0610**: Live Patches & Hotfixes
+  - *Description*: Applying critical code changes (patches) to a running system in memory without restarting the service or machine, often to fix urgent bugs or security vulnerabilities.
   - *Examples*: Kernel Live Patches, Dynamic Hot-swapping
 
 - **N0620**: Dynamic Module Loading
+  - *Description*: The capability of an application to load new code modules, such as plugins or shared libraries, at runtime to extend or modify its functionality without a restart.
   - *Examples*: Plugin Systems, Dynamic Library Loading
 
 - **N0630**: Over-the-Air (OTA) Update Payloads
+  - *Description*: The package containing the software update that is delivered wirelessly to a device. Payloads can be small delta patches or complete firmware images.
   - *Examples*: Delta Update Packages, Full Image Updates
 
 - **N0699**: Provisional Live & Dynamic Distributions Item

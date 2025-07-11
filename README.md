@@ -4,6 +4,26 @@ The Software Component Index ("SCIndex", pronounced **IPA: /ˈsɪndeks/** or SIN
 
 To address the software industry's lack of a standard identifier system the Scindex provides a universal indexing system for documenting software projects. Scindex codes are human and machine readable, comparable across products, scalable, robustly traceable, and fit for operationalized uses such as linting, auto-lookup, and AI context setting. Inspired by the AEC industry's "[MasterFormat](https://en.wikipedia.org/wiki/MasterFormat)," Scindex creates a common language that brings immediate clarity to the scope and context of records, enabling improved analysis and interoperability across teams and tools.
 
+## Quick Start (LLM prompt)
+
+To obtain a list of Scindex codes relevant to your project follow these steps:
+- Download or copy the latest [scindex.txt](https://github.com/scindex/scindex/releases/download/v0.2.2/scindex.txt) release
+- Open your favorite LLM prompt tool and create a prompt similar to the following:
+
+```
+You are a senior software architect tasked with analyzing a new project proposal using the Software Component Index (Scindex), a standard for classifying software components. 
+
+**Project Description:** 
+A web application, hosted on Microsoft Azure, that allows authenticated users to adjust their home lighting system and temperature controls. The system integrates with Google Home. Users can create profiles and preferences, and set time- and temperature-based rules for automation. The backend will be deployed as containers, and the system must be highly reliable. 
+
+**Your Task:** 
+Based on the full Scindex provided below in text format, identify all relevant item codes for which product requirements should be drafted. Present your answer grouped by the Scindex Division. For each code, provide a brief justification for its relevance to the project. 
+--- 
+Here is the Scindex: 
+<paste the full scindex.txt file here>
+```
+
+- Follow the usage instructions below to build full robustly traceable Scindex-based ids for all documents and artifacts in your project.
 ## Usage
 
 Scindex provides a structured core identifier that can be flexibly prefixed and suffixed to meet various documentation needs.
@@ -67,13 +87,15 @@ This flexibility makes searching and filtering straightforward. For instance, `g
 
 * **Human-Readable:** The codes are designed to be quickly understood by people. The use of alphabetic **Division codes** (e.g., `D`, `S`) provides immediate context without implying a rigid order, while the numeric components are easy to scan.
 
-* **Sayable:** The structure is meant to be spoken easily in conversations. For example, the code `D0140` is simply said as "data one-forty," or "data one-forty" which simplifies communication between team members.
+* **Sayable:** The structure is meant to be spoken easily in conversations. For example, the code `D0140` is simply said as "data one-forty," or "D one-forty" which simplifies communication between team members.
 
 * **Predictable Structure:** The standard `[DIVISION][SECTION][ITEM]` format (e.g., `D0140`) has a consistent length, which makes it reliable for automated parsing, pattern-based validation, and use in other tooling.
 
 * **Hierarchical, Scalable & Stable:** The system is inherently hierarchical, reflecting how software components are often organized. New divisions, sections, and items can be added without needing to re-number existing codes.
 
 * **Logical Grouping:** Using a standard count for **Sections** and a "10-series" for **Item codes** (e.g., `10`, `20`, `30`) creates clear, high-level groupings within a section and makes section ids discernibly different from item ids. This provides a logical structure while still allowing for numbers in between (e.g., `11`, `12`) if more granular items need to be added later.
+
+* **Extensible by Design:** The Scindex includes a standardized "escape hatch" for components that don't yet have a formal category. Every division and section contains a **provisional** entry with the ID **`99`**. This special number was chosen to be a consistent, predictable identifier, making provisional items easy to spot and audit. This allows teams to use the Scindex immediately for any component while providing a clear feedback mechanism to propose new, official categories.
 
 ## Releases & Downloads
 

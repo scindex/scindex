@@ -33,20 +33,29 @@ def export_toml(data, directory):
 
 def export_txt(data, directory):
     #Export plain text file
+    lines = ["Software Component Index (Scindex)"]
+    version = data.get('scindex_version')
+    lines.append(f"version {version}")
+    for division in data.get('divisions', []):
+        lines.append(f"\n{division['id']}     {division['name']}")
+        lines.append(f"      {division['description']}\n")
+        for section in division.get('sections', []):
+            lines.append(f"\n{division['id']}{section['id']}   {section['name']}")
+            lines.append(f"      {section['description']}")
+            for item in section.get('items', []):
+                lines.append(f"{item['id']} {item['name']}")
+                lines.append(f"      {item['description']}")
+    
     output_filename = os.path.join(directory, 'scindex.txt')
     with open(output_filename, 'w') as f:
-        for division in data.get('divisions', []):
-            for section in division.get('sections', []):
-                for item in section.get('items', []):
-                    line = f"{item['id']} {item['name']}\n"
-                    f.write(line)
+        f.write("\n".join(lines))
     print(f"Successfully exported to {output_filename}")
 
 def export_markdown(data):
     # Export Markdown file
     version = data.get('scindex_version')
     lines = ["# Software Component Index (Scindex)"]
-    lines.append(f"\n version: _{version}_\n date: _{datetime.datetime.now()}_")
+    lines.append(f"\n version: _{version}_\n date: _{datetime.datetime.now().strftime('%d/%m/%Y')}_")
     lines.append(f"\n ---")
     for division in data.get('divisions', []):
         lines.append(f"\n## Division: {division['id']} - {division['name']}")

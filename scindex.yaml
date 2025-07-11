@@ -80,6 +80,7 @@ divisions:
         items:
           - id: "10"
             name: "Documentation Structure & Style"
+            description: "Defines the required structure, file organization, and content for project documents, along with the official writing style, tone, and terminology to ensure consistency."
           - id: "99"
             name: "Provisional Documentation Standards Item"
             description: "A temporary holding category for Documentation Standards items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
@@ -724,45 +725,76 @@ divisions:
             description: "A temporary holding category for Hardware & Sensor Interfaces items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "05"
         name: "Diagnostic & Debug Interfaces"
+        description: "Covers interfaces used primarily for system diagnostics, debugging, and real-time monitoring, which may be separate from the main application interfaces."
         items:
           - id: "10"
             name: "Debug Ports"
+            description: "Low-level hardware interfaces used for in-circuit debugging, programming, and testing of microcontrollers and other integrated circuits."
             examples: ["JTAG", "SWD"]
           - id: "20"
             name: "Telemetry & Monitoring Endpoints"
+            description: "Dedicated endpoints for exporting application or system metrics, logs, and telemetry data to monitoring tools."
             examples: ["Prometheus Exporters", "StatsD", "Custom UDP Streams"]
           - id: "30"
             name: "Hardware-in-the-Loop (HIL) Interfaces"
+            description: "Interfaces that connect a real-time system to a simulated environment, allowing for testing of the system's hardware and software components together."
             examples: ["FPGA-based HIL", "dSPACE", "Opal-RT"]
           - id: "99"
             name: "Provisional Diagnostic & Debug Interfaces Item"
             description: "A temporary holding category for Diagnostic & Debug Interfaces items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "06"
         name: "Industrial & Field Bus Interfaces"
+        description: "Specialized, often rugged, communication protocols (buses) used for real-time control and data acquisition in industrial, automotive, and avionics environments."
         items:
           - id: "10"
             name: "Automotive Buses"
+            description: "Protocols designed for communication between electronic control units (ECUs) within vehicles, optimized for reliability and real-time performance."
             examples: ["CAN bus", "LIN bus", "FlexRay", "Automotive Ethernet"]
           - id: "20"
             name: "Industrial Automation Buses"
+            description: "Protocols used for communication and control of machinery and equipment in industrial settings, such as factory floors and processing plants."
             examples: ["Modbus", "PROFIBUS", "EtherCAT"]
           - id: "30"
             name: "Avionics Buses"
+            description: "Data buses specifically designed for the high-reliability, safety-critical environment of aircraft and spacecraft electronics."
             examples: ["ARINC 429", "MIL-STD-1553", "AFDX"]
           - id: "99"
             name: "Provisional Industrial & Field Bus Interfaces Item"
             description: "A temporary holding category for Industrial & Field Bus Interfaces items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "07"
         name: "System Management & Control Interfaces"
+        description: "Interfaces designed for out-of-band management, low-level hardware control, and monitoring of the physical system's health and environment."
         items:
           - id: "10"
             name: "Baseboard Management Controllers (BMC)"
+            description: "A specialized service processor on a server motherboard that allows for remote monitoring and management of the host system, independent of the main CPU and OS."
             examples: ["IPMI", "Redfish", "iDRAC", "iLO"]
           - id: "20"
             name: "Power & Clock Control Interfaces"
+            description: "Interfaces and standards for managing the power states, clock speeds, and thermal properties of system components to optimize performance and energy consumption."
             examples: ["ACPI", "PMBus"]
           - id: "30"
             name: "System Health & Environmental Sensors"
+            description: "Interfaces for reading data from onboard sensors that monitor the physical health of the system, such as fan speeds, component temperatures, and voltage levels."
+            examples: ["Fan Speed Sensors", "Temperature Sensors", "Voltage Monitors"]
+          - id: "99"
+            name: "Provisional Industrial & Field Bus Interfaces Item"
+            description: "A temporary holding category for Industrial & Field Bus Interfaces items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
+      - id: "07"
+        name: "System Management & Control Interfaces"
+        description: "Interfaces designed for out-of-band management, low-level hardware control, and monitoring of the physical system's health and environment."
+        items:
+          - id: "10"
+            name: "Baseboard Management Controllers (BMC)"
+            description: "A specialized service processor on a server motherboard that allows for remote monitoring and management of the host system, independent of the main CPU and OS."
+            examples: ["IPMI", "Redfish", "iDRAC", "iLO"]
+          - id: "20"
+            name: "Power & Clock Control Interfaces"
+            description: "Interfaces and standards for managing the power states, clock speeds, and thermal properties of system components to optimize performance and energy consumption."
+            examples: ["ACPI", "PMBus"]
+          - id: "30"
+            name: "System Health & Environmental Sensors"
+            description: "Interfaces for reading data from onboard sensors that monitor the physical health of the system, such as fan speeds, component temperatures, and voltage levels."
             examples: ["Fan Speed Sensors", "Temperature Sensors", "Voltage Monitors"]
           - id: "99"
             name: "Provisional System Management & Control Interfaces Item"
@@ -815,45 +847,57 @@ divisions:
             description: "A temporary holding category for Packaged & Deployed Artifacts items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "04"
         name: "Source & Intermediate Distributions"
+        description: "Deliverables where the end-user is expected to compile, build, or integrate the software themselves, common for SDKs, embedded systems, and open-source projects."
         items:
           - id: "10"
             name: "Source Code Archives"
+            description: "The complete, uncompiled source code of a software project, compressed into a single archive file for distribution."
             examples: [".tar.gz", ".zip"]
           - id: "20"
             name: "Build System & Toolchain Packages"
+            description: "Packages and configuration files for specialized build systems, used to compile a complete, custom operating system and application for a target device."
             examples: ["Yocto Layers", "Buildroot Configs", "Crosstool-NG"]
           - id: "30"
             name: "Pre-compiled Object & Static Libraries"
+            description: "Files containing compiled code (.o, .obj) or archives of object files (.a, .lib) that are linked into a final executable during the build process."
             examples: [".o", ".a", ".lib"]
           - id: "99"
             name: "Provisional Source & Intermediate Distributions Item"
             description: "A temporary holding category for Source & Intermediate Distributions items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "05"
         name: "Provisioned Hardware & Appliances"
+        description: "Covers scenarios where the software is delivered pre-installed on physical hardware or as a complete, self-contained virtual machine image."
         items:
           - id: "10"
             name: "Pre-flashed Hardware"
+            description: "Physical hardware, such as microcontrollers or complete devices, that is delivered to the end-user with the software firmware already installed ('flashed')."
             examples: ["Pre-flashed Microcontrollers", "Development Kits"]
           - id: "20"
             name: "Virtual Appliances"
+            description: "A pre-packaged virtual machine image that contains a pre-configured operating system and all the necessary application software, ready to be run in a hypervisor."
             examples: ["OVA", "VHD", "QCOW2"]
           - id: "30"
             name: "Bootable Media"
+            description: "A storage medium (e.g., USB drive, CD/DVD, or ISO file) that contains a bootable operating system and application, allowing a user to run the software without installing it on their hard drive."
             examples: ["Live ISOs", "USB Boot Images"]
           - id: "99"
             name: "Provisional Provisioned Hardware & Appliances Item"
             description: "A temporary holding category for Provisioned Hardware & Appliances items that do not fit other defined items. Use sparingly and submit a 'Suggestion' issue to have the component formally added to the Scindex."
       - id: "06"
         name: "Live & Dynamic Distributions"
+        description: "Mechanisms for delivering updates or new components to a system that is already running, which is critical for high-availability systems that cannot be shut down."
         items:
           - id: "10"
             name: "Live Patches & Hotfixes"
+            description: "Applying critical code changes (patches) to a running system in memory without restarting the service or machine, often to fix urgent bugs or security vulnerabilities."
             examples: ["Kernel Live Patches", "Dynamic Hot-swapping"]
           - id: "20"
             name: "Dynamic Module Loading"
+            description: "The capability of an application to load new code modules, such as plugins or shared libraries, at runtime to extend or modify its functionality without a restart."
             examples: ["Plugin Systems", "Dynamic Library Loading"]
           - id: "30"
             name: "Over-the-Air (OTA) Update Payloads"
+            description: "The package containing the software update that is delivered wirelessly to a device. Payloads can be small delta patches or complete firmware images."
             examples: ["Delta Update Packages", "Full Image Updates"]
           - id: "99"
             name: "Provisional Live & Dynamic Distributions Item"
