@@ -30,7 +30,7 @@ divisions:
             examples: ["RACI Matrix", "Product Owner vs Project Manager", "Architect Role"]
           - id: "50"
             name: "Vendor & Stakeholder Communication Process"
-            description: "Contact information and communications proceess for external vendors or stakeholders."
+            description: "Contact information and communications process for external vendors or stakeholders."
           - id: "60"
             name: "Budget & Financial Process"
             description: "Administrative processes related to project budget, invoicing, or purchasing."
