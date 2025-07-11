@@ -28,7 +28,7 @@ _Covers the processes for planning, executing, and managing project work._
   - *Examples*: RACI Matrix, Product Owner vs Project Manager, Architect Role
 
 - **M0150**: Vendor & Stakeholder Communication Process
-  - *Description*: Contact information and communications proceess for external vendors or stakeholders.
+  - *Description*: Contact information and communications process for external vendors or stakeholders.
 
 - **M0160**: Budget & Financial Process
   - *Description*: Administrative processes related to project budget, invoicing, or purchasing.
