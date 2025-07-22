@@ -95,7 +95,30 @@ This flexibility makes searching and filtering straightforward. For instance, `g
 
 * **Logical Grouping:** Using a standard count for **Sections** and a "10-series" for **Item codes** (e.g., `10`, `20`, `30`) creates clear, high-level groupings within a section and makes section ids discernibly different from item ids. This provides a logical structure while still allowing for numbers in between (e.g., `11`, `12`) if more granular items need to be added later.
 
-* **Extensible by Design:** The Scindex includes a standardized "escape hatch" for components that don't yet have a formal category. Every division and section contains a **provisional** entry with the ID **`99`**. This special number was chosen to be a consistent, predictable identifier, making provisional items easy to spot and audit. This allows teams to use the Scindex immediately for any component while providing a clear feedback mechanism to propose new, official categories.
+## Special Conventions
+
+To enhance the organization of documentation, the Scindex includes two special numeric conventions: `00` for summaries and `99` for provisional items.
+
+### The '00' Summary Code
+The `00` code is reserved for creating high-level summary documents that describe the architectural approach or guiding principles for an entire division or section.
+
+* **Division Summary (e.g., `D0000`)**: A document with this code provides an overall summary for its entire division. For example, `D0000` would be the place for a document describing the complete data management strategy.
+* **Section Summary (e.g., `D0100`)**: A document with this code provides a summary for a specific section. For example, `D0100` would describe the project's overall approach to databases.
+
+### The '99' Provisional Code
+The `99` code acts as a standardized "escape hatch" for components that do not yet have a formal category in the Scindex. Its use should be temporary and is meant to encourage the evolution of the standard.
+
+* **Provisional Section (e.g., `P9999`)**: If a component belongs to a division (like Platform) but none of the existing sections fit, it can be placed in the provisional section.
+* **Provisional Item (e.g., `P0199`)**: If a component fits within an existing section (like Compute) but none of the items are appropriate, it can use the provisional item code.
+
+**Important**: Usage of a `99` code should always be followed by submitting a "Suggestion" issue to the Scindex project to have a new, formal category created.
+
+### Quick Reference
+
+| Code | Purpose | Use When... |
+| :--- | :--- | :--- |
+| **`00`** | **Summary** | You are writing a high-level overview or architectural vision for a division or section. |
+| **`99`** | **Provisional** | A component doesn't fit any existing category and you need a temporary placeholder. |
 
 ## Releases & Downloads
 
