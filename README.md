@@ -7,7 +7,7 @@ To address the software industry's lack of a standard identifier system the Scin
 ## Quick Start (LLM prompt)
 
 To obtain a list of Scindex codes relevant to your project follow these steps:
-- Download or copy the latest [scindex.txt](https://github.com/scindex/scindex/releases/download/v0.2.2/scindex.txt) release
+- Download or copy the latest [scindex.txt](https://github.com/scindex/scindex/releases/download/v0.2.3/scindex.txt) release
 - Open your favorite LLM prompt tool and create a prompt similar to the following:
 
 ```
