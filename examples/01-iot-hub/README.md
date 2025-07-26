@@ -6,11 +6,12 @@ This example demonstrates how Scindex is used to document an IoT Hub that manage
 
 This table shows how requirements, decisions, and tests are interconnected using Scindex codes.
 
+
 | ID                | Type        | Description                                       | Related To                                    |
 | ----------------- | ----------- | ------------------------------------------------- | --------------------------------------------- |
-| [REQ-I0420-01](./requirements/REQ-I0420-01.md) | Requirement | The hub must ingest temperature data from sensors.  | Implemented by `ADR-D0510-01`                  |
-| [REQ-C0110-01](./requirements/REQ-C0110-01.md) | Requirement | The system must use a rules engine for climate control. | Verified by `TST-C0110-01`                    |
-| [ADR-P0320-01](./adrs/ADR-P0320-01.md)       | ADR         | Decision to use a Real-Time Operating System (RTOS).  | -                                             |
-| [ADR-D0510-01](./adrs/ADR-D0510-01.md)       | ADR         | Decision to use MQTT for all device communication.    | Implements `REQ-I0420-01`                      |
-| [TEST-C0110-01](./tests/TST-C0110-01.md)      | Test Case   | Verifies the climate control rule works correctly.  | Tests `REQ-C0110-01`                           |
-| [GEN-0210-01](./standards/G0210-01.md)     | Standard    | Defines the C++ code formatting standard.           | Applies to all firmware development            |
+| [REQ-I0420-01](./requirements/REQ-I0420-01_temp_sensor_ingest.md)  | Requirement | The hub must ingest temperature data from sensors.  | Implemented by `ADR-D0510-01`                  |
+| [REQ-C0110-01](./requirements/REQ-C0110-01_aut_climate_control.md) | Requirement | The system must use a rules engine for climate control. | Verified by `TST-C0110-01`                    |
+| [ADR-P0320-01](./adrs/ADR-P0320-01_operating_sys.md)       | ADR         | Decision to use a Real-Time Operating System (RTOS).  | -                                             |
+| [ADR-D0510-01](./adrs/ADR-D0510-01_device_comm_protocol.md)       | ADR         | Decision to use MQTT for all device communication.    | Implements `REQ-I0420-01`                      |
+| [TEST-C0110-01](./tests/TST-C0110-01_verify_climate_control_rule.md)      | Test Case   | Verifies the climate control rule works correctly.  | Tests `REQ-C0110-01`                           |
+| [GEN-0210-01](./standards/G0210-01_firmware_code_format.md)     | Standard    | Defines the C++ code formatting standard.           | Applies to all firmware development            |
