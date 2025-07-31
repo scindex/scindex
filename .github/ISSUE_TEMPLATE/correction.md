@@ -3,7 +3,7 @@ name: "✍️ Correction: Report an error in an existing entry"
 title: "Correct: [scindex ID] - [Brief description of correction]"
 labels: "correction, needs-review"
 assignees: ''
-
+about: "Use this template for tracking corrections to the scindex."
 ---
 
 **Thank you for helping us maintain the accuracy of the scindex!** Please use this template to report an error or suggest an improvement to an existing entry.

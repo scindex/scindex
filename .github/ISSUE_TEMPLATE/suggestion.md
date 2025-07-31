@@ -3,7 +3,7 @@ name: "💡 Suggestion: Propose a new scindex entry"
 title: "Suggest: [Brief description of new entry]"
 labels: "suggestion, needs-review"
 assignees: ''
-
+about: "Use this template for tracking suggested additions to the scindex."
 ---
 
 **Thank you for helping improve the Software Component Index!** Please fill out the details below to help us understand your proposal.
