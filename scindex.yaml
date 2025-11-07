@@ -1,6 +1,7 @@
 # Software Component Index (scindex)
 # Edit this "source of truth" file to maintain the index.
-# Run `python compiler.py` to export to JSON, TOML, etc.
+# Run `scindex export` to export to JSON, TOML, etc.
+# See CONTRIBUTING.md for `scindex` setup and usage
 
 scindex_version: "0.2.2"
 divisions:

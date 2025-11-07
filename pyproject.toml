@@ -1,0 +1,27 @@
+[project]
+name = "scindex"
+version = "0.1.0"
+description = "A vendor-neutral, open-standard specification for categorizing and numbering all components of a software system."
+authors = [{ name = "F39", email = "mq@f39.design" }]
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+keywords = ["software architecture", "documentation", "indexing"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "pyyaml",
+    "toml",
+    "sentence-transformers",
+    "numpy",
+]
+
+[project.urls]
+Homepage = "https://github.com/scindex/scindex"
+Issues = "https://github.com/scindex/scindex/issues"
+
+[project.scripts]
+scindex = "scindex.cli:main"

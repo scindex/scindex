@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/scindex/__init__.py
+src/scindex/cli.py
+src/scindex/compiler.py
+src/scindex/lookup.py
+src/scindex/metrics.py
+src/scindex.egg-info/PKG-INFO
+src/scindex.egg-info/SOURCES.txt
+src/scindex.egg-info/dependency_links.txt
+src/scindex.egg-info/entry_points.txt
+src/scindex.egg-info/requires.txt
+src/scindex.egg-info/top_level.txt
+tests/test_compiler.py
+tests/test_lookup.py

@@ -1,3 +1,6 @@
 *.obsidian
 .gemini/
 dist/
+s_env/
+docs/_working/
+tests/

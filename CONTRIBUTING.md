@@ -46,3 +46,79 @@ Once the change has been discussed and has received a go-ahead from a maintainer
 4.  A maintainer will review your Pull Request. If any changes are needed, we will work with you to get it ready for merging.
 
 Once your Pull Request is merged, your contribution will be included in the next official release! Thank you for making the `scindex` better.
+
+---
+
+## Development Environment and Tooling
+
+If you are contributing to the Python tooling for this project, follow these instructions to set up your development environment.
+
+### 1. Prerequisites
+*   Python 3.8 or higher.
+*   `pip` and `venv` for package management.
+
+### 2. Environment Setup
+First, clone the repository to your local machine. Then, from the root of the project directory, create and activate a virtual environment:
+
+```bash
+# Create a virtual environment
+python3 -m venv .venv
+
+# Activate the virtual environment
+# On macOS and Linux:
+source .venv/bin/activate
+# On Windows:
+# .\.venv\Scripts\activate
+```
+
+### 3. Install Dependencies
+With your virtual environment activated, install the project in "editable" mode. This will install all required dependencies and create the `scindex` command-line tool linked directly to your source code.
+
+```bash
+pip install -e .
+```
+
+After installation, you can verify that the CLI tool is working:
+```bash
+scindex --help
+```
+
+### 4. Using the CLI Tool
+The primary tool for developers is the `scindex` command, which allows you to generate the various distribution formats from the master `scindex.yaml` file.
+
+#### The `export` Command
+The `export` command compiles the `scindex.yaml` file into other formats.
+
+**Usage:**
+```
+scindex export [--dict <path>] [--output <dir>] [--format <name>]
+```
+
+**Arguments:**
+*   `--dict <path>`: Path to the source `scindex.yaml` file. Defaults to `scindex.yaml` in the current directory.
+*   `--output <dir>`: Directory where generated files will be saved. Defaults to `dist/`.
+*   `--format <name>`: A specific format to generate (`json`, `toml`, `txt`, `md`, `embeddings`). If omitted, all standard formats (except embeddings) are generated.
+
+**Examples:**
+
+```bash
+# Generate all standard formats (json, toml, txt, md) into the dist/ directory
+scindex export
+
+# Generate only the JSON output
+scindex export --format json
+
+# Generate the Markdown file in a different directory
+scindex export --format md --output ./docs/generated
+
+# Generate embeddings from a differently named source file
+scindex export --format embeddings --dict ./my-custom-index.yaml
+```
+
+### 5. Running Tests
+The project uses `pytest` for testing. To run the test suite, execute the following command from the project root:
+
+```bash
+pytest
+```
+This will discover and run all tests located in the `tests/` directory.

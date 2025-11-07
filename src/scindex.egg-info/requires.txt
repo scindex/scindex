@@ -1,0 +1,4 @@
+pyyaml
+toml
+sentence-transformers
+numpy
